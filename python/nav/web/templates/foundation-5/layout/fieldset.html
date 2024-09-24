@@ -1,0 +1,7 @@
+{# NAV's minimally viable version of crispy Fieldset #}
+
+<fieldset
+    {% if fieldset.css_class %} class="{{ fieldset.css_class }}" {% endif %}>
+  {% if legend %}<legend>{{ legend|safe }}</legend>{% endif %}
+  {{ fields|safe }}
+</fieldset>
