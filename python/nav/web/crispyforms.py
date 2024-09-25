@@ -61,3 +61,47 @@ class NumberField(forms.IntegerField):
     """Input field with type set to number"""
 
     widget = NumberInput
+
+
+# For uncrispyfied forms:
+
+
+class FlatFieldset:
+    template = 'custom_crispy_templates/flat_fieldset.html'
+
+
+def set_flat_fieldset(legend, fields: list, css_class=''):
+    obj = FlatFieldset()
+    obj.legend = legend
+    obj.fields = fields
+    obj.css_class = css_class
+    return obj
+
+
+class SubmitField:
+    def __init__(
+        self, name: str = 'submit', value: str = 'Submit', css_classes: str = ''
+    ):
+        self.name = name
+        self.value = value
+        self.css_classes = css_classes
+        self.input_type = 'submit'
+
+
+def set_flat_form_attributes(
+    legend=None,
+    form_action='',
+    form_method='get',
+    submit_field: SubmitField or None = None,
+    form_fields: list = None,
+):
+    class Obj:
+        pass
+
+    obj = Obj()
+    obj.legend = legend
+    obj.action = form_action
+    obj.method = form_method
+    obj.submit_field = submit_field
+    obj.form_fields = form_fields
+    return obj
