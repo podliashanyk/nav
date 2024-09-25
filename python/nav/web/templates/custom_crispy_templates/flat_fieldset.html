@@ -1,0 +1,13 @@
+{# NB! This fieldset does not support nested layouts (f.e. Row, or Column layout from crispy forms) #}
+
+<fieldset
+    {% if field.css_class %} class="{{ field.css_class }}" {% endif %}
+>
+  {% if field.legend %}
+    <legend>{{ field.legend|safe }}</legend>{% endif %}
+  {% block fieldset_fields %}
+    {% for field in field.fields %}
+      {% include 'custom_crispy_templates/_form_field.html' %}
+    {% endfor %}
+  {% endblock %}
+</fieldset>
