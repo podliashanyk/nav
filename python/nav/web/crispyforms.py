@@ -78,6 +78,20 @@ def set_flat_fieldset(legend, fields: list, css_class=''):
     return obj
 
 
+class FormRow:
+    def __init__(self, fields: list, css_classes: str = ''):
+        self.fields = fields
+        self.css_classes = css_classes
+        self.template = 'custom_crispy_templates/form_row.html'
+
+
+class FormColumn:
+    def __init__(self, fields: list, css_classes: str = ''):
+        self.fields = fields
+        self.css_classes = css_classes
+        self.template = 'custom_crispy_templates/form_column.html'
+
+
 class SubmitField:
     def __init__(
         self, name: str = 'submit', value: str = 'Submit', css_classes: str = ''
