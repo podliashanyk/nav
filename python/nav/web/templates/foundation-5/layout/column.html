@@ -1,0 +1,7 @@
+{# Used as base by following (crispy) classes: Column #}
+
+<div
+    class="columns {{ div.css_class|default:'' }}"
+    {{ div.flat_attrs|safe }}>
+  {{ fields|safe }}
+</div>
