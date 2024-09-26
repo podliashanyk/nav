@@ -31,14 +31,14 @@ from crispy_forms_foundation.layout import (
 
 from nav.models.event import EventType, AlertType
 from nav.models.manage import Organization, Category, NetboxGroup, Location
-from nav.web.crispyforms import NumberField
-from . import STATELESS_THRESHOLD
-from ..crispyforms import (
+from nav.web.crispyforms import (
+    NumberField,
     set_flat_form_attributes,
     FormRow,
     FormColumn,
     set_flat_fieldset,
 )
+from . import STATELESS_THRESHOLD
 
 
 class StatusPanelForm(forms.Form):
