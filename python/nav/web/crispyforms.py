@@ -107,7 +107,7 @@ def set_flat_form_attributes(
     legend=None,
     form_id: str = None,
     form_action='',
-    form_method='get',
+    form_method='post',
     submit_field: Optional[SubmitField] = None,
     form_fields: list = None,
 ):
