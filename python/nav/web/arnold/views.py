@@ -155,10 +155,8 @@ def render_justifications(request, jid=None):
                 'description': justification.description,
             }
         )
-        form.attrs.method = 'post'
     else:
         form = JustificationForm()
-        form.attrs.method = 'post'
 
     justifications = Justification.objects.all()
     for justification in justifications:
