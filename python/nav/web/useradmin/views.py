@@ -393,7 +393,6 @@ def group_detail(request, group_id=None):
 
     group_form = forms.AccountGroupForm(instance=group)
     account_form = forms.AccountAddForm(group)
-    account_form.attrs.method = 'post'
     privilege_form = forms.PrivilegeForm()
 
     if request.method == 'POST':
