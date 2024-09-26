@@ -14,6 +14,7 @@
 # License along with NAV. If not, see <http://www.gnu.org/licenses/>.
 #
 """A collection of forms using the django crispy forms framework"""
+from typing import Optional
 
 from django import forms
 from crispy_forms.layout import BaseInput
@@ -107,7 +108,7 @@ def set_flat_form_attributes(
     form_id: str = None,
     form_action='',
     form_method='get',
-    submit_field: SubmitField or None = None,
+    submit_field: Optional[SubmitField] = None,
     form_fields: list = None,
 ):
     class Obj:
