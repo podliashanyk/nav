@@ -105,6 +105,7 @@ class SubmitField:
 
 def set_flat_form_attributes(
     legend=None,
+    form_id: str = None,
     form_action='',
     form_method='post',
     submit_field: Optional[SubmitField] = None,
@@ -114,6 +115,7 @@ def set_flat_form_attributes(
         pass
 
     obj = Obj()
+    obj.id = form_id
     obj.legend = legend
     obj.action = form_action
     obj.method = form_method

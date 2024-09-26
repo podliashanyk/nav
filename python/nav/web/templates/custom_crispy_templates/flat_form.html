@@ -1,7 +1,9 @@
 {# NB! This form does not support nested layouts (f.e. Row, or Column layout from crispy forms) #}
 
-<form method="{{ form.attrs.method }}"
-      {% if form.attrs.action %}action="{% url form.attrs.action %}"{% endif %}
+<form
+    {% if form.attrs.id %}id="{{ form.attrs.id }}"{% endif %}
+    method="{{ form.attrs.method }}"
+    {% if form.attrs.action %}action="{% url form.attrs.action %}"{% endif %}
 >
   {% block form_content %}
     {% include 'custom_crispy_templates/_form_content.html' %}
